@@ -27,7 +27,8 @@ const countries = [
   {
     "index": "map_6",
     "country_name": "ARGENTINA",
-    "visited": true
+    "visited": true,
+    "days": 45
   },
   {
     "index": "map_7",
@@ -107,7 +108,9 @@ const countries = [
   {
     "index": "map_22",
     "country_name": "BRAZIL",
-    "visited": true
+    "visited": true,
+    "days": 35
+
   },
   {
     "index": "map_23",
@@ -197,7 +200,8 @@ const countries = [
   {
     "index": "map_40",
     "country_name": "CYPRUS",
-    "visited": true
+    "visited": true,
+    "days": 7
   },
   {
     "index": "map_41",
@@ -237,7 +241,8 @@ const countries = [
   {
     "index": "map_48",
     "country_name": "EGYPT",
-    "visited": true
+    "visited": true,
+    "days": 7
   },
   {
     "index": "map_49",
@@ -277,7 +282,9 @@ const countries = [
   {
     "index": "map_56",
     "country_name": "FRANCE",
-    "visited": true
+    "visited": true,
+    "days": 61
+
   },
   {
     "index": "map_57",
@@ -307,7 +314,9 @@ const countries = [
   {
     "index": "map_62",
     "country_name": "GREECE",
-    "visited": true
+    "visited": true,
+    "days": 13
+
   },
   {
     "index": "map_63",
@@ -362,7 +371,9 @@ const countries = [
   {
     "index": "map_73",
     "country_name": "INDONESIA",
-    "visited": true
+    "visited": true,
+    "days": 60
+
   },
   {
     "index": "map_74",
@@ -387,7 +398,9 @@ const countries = [
   {
     "index": "map_78",
     "country_name": "ITALY",
-    "visited": true
+    "visited": true,
+    "days": 9
+
   },
   {
     "index": "map_79",
@@ -492,7 +505,9 @@ const countries = [
   {
     "index": "map_99",
     "country_name": "MALAYSIA",
-    "visited": true
+    "visited": true,
+    "days": 2
+
   },
   {
     "index": "map_100",
@@ -642,12 +657,16 @@ const countries = [
   {
     "index": "map_129",
     "country_name": "POLAND",
-    "visited": true
+    "visited": true,
+    "days": 14
+
   },
   {
     "index": "map_130",
     "country_name": "PORTUGAL",
-    "visited": true
+    "visited": true,
+    "days": 28
+
   },
   {
     "index": "map_131",
@@ -667,7 +686,9 @@ const countries = [
   {
     "index": "map_134",
     "country_name": "RUSSIA",
-    "visited": true
+    "visited": true,
+    "days": 3
+
   },
   {
     "index": "map_135",
@@ -742,7 +763,9 @@ const countries = [
   {
     "index": "map_149",
     "country_name": "SPAIN",
-    "visited": true
+    "visited": true,
+    "days": 7
+
   },
   {
     "index": "map_150",
@@ -802,7 +825,9 @@ const countries = [
   {
     "index": "map_161",
     "country_name": "THAILAND",
-    "visited": true
+    "visited": true,
+    "days": 28
+
   },
   {
     "index": "map_162",
@@ -852,7 +877,9 @@ const countries = [
   {
     "index": "map_171",
     "country_name": "UNITED KINGDOM",
-    "visited": true
+    "visited": true,
+    "days": 43
+
   },
   {
     "index": "map_172",
@@ -905,6 +932,16 @@ const visitedCountries = countries.filter((c)=> c.visited);
 
 visitedCountries.forEach((vc)=>{
   const area = document.getElementById(vc.index);
-  area.setAttribute('class', 'highlight');
-
+  area.classList.add('visited');
+  if (vc.days <= 3){
+    area.classList.add('highlight-3');
+  } else if(vc.days > 3 && vc.days <= 12 ){
+    area.classList.add('highlight-12');
+  } else if(vc.days >12 && vc.days <= 27 ){
+    area.classList.add('highlight-27');
+  } else if(vc.days > 27 && vc.days <= 60 ){
+    area.classList.add('highlight-60');
+  } else if(vc.days > 60 ){
+    area.classList.add('highlight-60-more');
+  }
 })
