@@ -842,7 +842,7 @@ const countries = [
   {
     "index": "map_169",
     "country_name": "UKRAINE",
-    "visited": true
+    "visited": false
   },
   {
     "index": "map_170",
