@@ -28,7 +28,8 @@ const countries = [
     "index": "map_6",
     "country_name": "ARGENTINA",
     "visited": true,
-    "days": 45
+    "days": 45,
+    "dates": [{from:"2022-02-11", to:"2022-03-31"}]
   },
   {
     "index": "map_7",
@@ -109,8 +110,9 @@ const countries = [
     "index": "map_22",
     "country_name": "BRAZIL",
     "visited": true,
-    "days": 35
-
+    "days": 35,
+    "dates": [{from:"2022-01-22", to:"2022-02-13",place: "Rio de Janeiro"},
+      {from:"2022-03-31", to:"2022-04-09",place: "Florianopolis"}]
   },
   {
     "index": "map_23",
@@ -201,7 +203,8 @@ const countries = [
     "index": "map_40",
     "country_name": "CYPRUS",
     "visited": true,
-    "days": 7
+    "days": 7,
+    "dates": [{from:"2021-05-29", to:"2021-06-05", place: "Limasol"}]
   },
   {
     "index": "map_41",
@@ -242,7 +245,8 @@ const countries = [
     "index": "map_48",
     "country_name": "EGYPT",
     "visited": true,
-    "days": 7
+    "days": 7,
+    "dates": [{from:"2019-11-11", to:"2019-11-18", place: "Sharm El Sheikh"}]
   },
   {
     "index": "map_49",
@@ -283,8 +287,9 @@ const countries = [
     "index": "map_56",
     "country_name": "FRANCE",
     "visited": true,
-    "days": 61
-
+    "days": 61,
+    "dates": [{from:"2022-04-24", to:"2022-05-22",place: "Paris"},
+      {from:"2022-06-05", to:"2022-07-10",place: "Nice"} ]
   },
   {
     "index": "map_57",
@@ -315,8 +320,8 @@ const countries = [
     "index": "map_62",
     "country_name": "GREECE",
     "visited": true,
-    "days": 13
-
+    "days": 13,
+    "dates": [{from:"2018-05-18", to:"2018-06-01", place: "Athens"}]
   },
   {
     "index": "map_63",
@@ -372,8 +377,8 @@ const countries = [
     "index": "map_73",
     "country_name": "INDONESIA",
     "visited": true,
-    "days": 60
-
+    "days": 60,
+    "dates": [{from:"2022-08-06", to:"2022-10-01", place: "Bali"}]
   },
   {
     "index": "map_74",
@@ -399,8 +404,8 @@ const countries = [
     "index": "map_78",
     "country_name": "ITALY",
     "visited": true,
-    "days": 9
-
+    "days": 9,
+    "dates": [{from:"2019-05-29", to:"2019-06-07", place: "Roma, Florence"}]
   },
   {
     "index": "map_79",
@@ -506,7 +511,8 @@ const countries = [
     "index": "map_99",
     "country_name": "MALAYSIA",
     "visited": true,
-    "days": 2
+    "days": 2,
+    "dates": [{from:"2022-09-02", to:"2022-09-04", place: "Kuala Lumpur"}]
 
   },
   {
@@ -658,14 +664,16 @@ const countries = [
     "index": "map_129",
     "country_name": "POLAND",
     "visited": true,
-    "days": 14
+    "days": 14,
+    "dates": [{from:"2022-02-11", to:"2022-03-31"}]
 
   },
   {
     "index": "map_130",
     "country_name": "PORTUGAL",
     "visited": true,
-    "days": 28
+    "days": 28,
+    "dates": [{from:"2021-11-22", to:"2021-12-19", place: "Lisabon"}]
 
   },
   {
@@ -687,8 +695,8 @@ const countries = [
     "index": "map_134",
     "country_name": "RUSSIA",
     "visited": true,
-    "days": 3
-
+    "days": 5,
+    "dates": [{from:"2022-02-11", to:"2022-03-31"}]
   },
   {
     "index": "map_135",
@@ -764,8 +772,8 @@ const countries = [
     "index": "map_149",
     "country_name": "SPAIN",
     "visited": true,
-    "days": 7
-
+    "days": 7,
+    "dates": [{from:"2018-11-12", to:"2018-11-19", place: "Barcelona"}]
   },
   {
     "index": "map_150",
@@ -826,8 +834,10 @@ const countries = [
     "index": "map_161",
     "country_name": "THAILAND",
     "visited": true,
-    "days": 28
-
+    "days": 60,
+    "dates": [{from:"2022-07-11", to:"2022-07-16",place:"Bangkok"},
+      {from:"2022-07-16", to:"2022-08-06",place:"Krabi"},
+      {from:"2022-10-01", to:"2022-10-29",place:"Krabi"}]
   },
   {
     "index": "map_162",
@@ -878,8 +888,9 @@ const countries = [
     "index": "map_171",
     "country_name": "UNITED KINGDOM",
     "visited": true,
-    "days": 43
-
+    "days": 43,
+    "dates": [{from:"2021-12-19", to:"2022-01-22", place: "London"},
+      {from:"2022-04-10", to:"2022-04-24", place: "London"} ]
   },
   {
     "index": "map_172",
@@ -932,6 +943,7 @@ const visitedCountries = countries.filter((c)=> c.visited);
 
 visitedCountries.forEach((vc)=>{
   const area = document.getElementById(vc.index);
+  area.onclick = () => showPopup(vc);
   area.classList.add('visited');
   if (vc.days <= 3){
     area.classList.add('highlight-3');
@@ -945,3 +957,7 @@ visitedCountries.forEach((vc)=>{
     area.classList.add('highlight-60-more');
   }
 })
+
+const showPopup = (country) => {
+  console.log(country)
+}
