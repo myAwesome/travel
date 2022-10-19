@@ -29,7 +29,7 @@ const countries = [
     "country_name": "ARGENTINA",
     "visited": true,
     "days": 45,
-    "dates": [{from:"2022-02-11", to:"2022-03-31"}]
+    "dates": [{from:"2022-02-11", to:"2022-03-31", place: "Buenos Aires, Iguasu"}]
   },
   {
     "index": "map_7",
@@ -665,7 +665,7 @@ const countries = [
     "country_name": "POLAND",
     "visited": true,
     "days": 14,
-    "dates": [{from:"2022-02-11", to:"2022-03-31"}]
+    "dates": [{from:"2022-02-11", to:"2022-03-31", place: 'Warsaw'}]
 
   },
   {
@@ -696,7 +696,7 @@ const countries = [
     "country_name": "RUSSIA",
     "visited": true,
     "days": 5,
-    "dates": [{from:"2022-02-11", to:"2022-03-31"}]
+    "dates": [{from:"2022-02-11", to:"2022-03-31", place: "Moscow"}]
   },
   {
     "index": "map_135",
@@ -958,6 +958,33 @@ visitedCountries.forEach((vc)=>{
   }
 })
 
+
+
+
+
+// Initialize Variables
+const closePopup = document.getElementById("popupclose");
+const overlay = document.getElementById("overlay");
+const popup = document.getElementById("popup");
+
+// Close Popup Event
 const showPopup = (country) => {
   console.log(country)
+  const popUpDates = document.getElementById("dates");
+  popUpDates.innerHTML = '';
+  for (let period of country.dates) {
+    const p = document.createElement("p");
+    p.innerHTML = `<a href="#">${period.from} - ${period.to} ${period.place}</a>`;
+    popUpDates.appendChild(p);
+  }
+  document.getElementById("country").innerText = country.country_name;
+
+  overlay.style.display = 'block';
+  popup.style.display = 'block';
+
 }
+
+closePopup.onclick = function() {
+  overlay.style.display = 'none';
+  popup.style.display = 'none';
+};
