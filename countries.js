@@ -665,7 +665,7 @@ const countries = [
     "country_name": "POLAND",
     "visited": true,
     "days": 14,
-    "dates": [{from:"2022-02-11", to:"2022-03-31", place: 'Warsaw'}]
+    "dates": [{from:"2022-05-22", to:"2022-06-05", place: 'Warsaw'}]
 
   },
   {
@@ -696,7 +696,7 @@ const countries = [
     "country_name": "RUSSIA",
     "visited": true,
     "days": 5,
-    "dates": [{from:"2022-02-11", to:"2022-03-31", place: "Moscow"}]
+    "dates": [{from:"2004-08-01", to:"2004-08-06", place: "Moscow"}]
   },
   {
     "index": "map_135",
