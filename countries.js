@@ -139,7 +139,7 @@ const countries = [
     "country_name": "CAMBODIA",
     "visited": true,
     "days": 14,
-    "dates": [{from:"2022-10-29", to:"2022-11-05", place: "Siem Reap"}]
+    "dates": [{from:"2022-10-29", to:"2022-11-12", place: "Siem Reap"}]
   },
   {
     "index": "map_28",
