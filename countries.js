@@ -29,7 +29,8 @@ const countries = [
     "country_name": "ARGENTINA",
     "visited": true,
     "days": 45,
-    "dates": [{from:"2022-02-11", to:"2022-03-31", place: "Buenos Aires, Iguasu"}]
+    "dates": [{from:"2022-02-11", to:"2022-03-31", place: "Buenos Aires, Iguasu"}],
+    "flag": "🇦🇷"
   },
   {
     "index": "map_7",
@@ -112,7 +113,8 @@ const countries = [
     "visited": true,
     "days": 35,
     "dates": [{from:"2022-01-22", to:"2022-02-13",place: "Rio de Janeiro"},
-      {from:"2022-03-31", to:"2022-04-09",place: "Florianopolis"}]
+      {from:"2022-03-31", to:"2022-04-09",place: "Florianopolis"}],
+    "flag": "🇧🇷"
   },
   {
     "index": "map_23",
@@ -139,7 +141,8 @@ const countries = [
     "country_name": "CAMBODIA",
     "visited": true,
     "days": 14,
-    "dates": [{from:"2022-10-29", to:"2022-11-12", place: "Siem Reap"}]
+    "dates": [{from:"2022-10-29", to:"2022-11-12", place: "Siem Reap"}],
+    "flag": "🇰🇭"
   },
   {
     "index": "map_28",
@@ -206,7 +209,8 @@ const countries = [
     "country_name": "CYPRUS",
     "visited": true,
     "days": 7,
-    "dates": [{from:"2021-05-29", to:"2021-06-05", place: "Limasol"}]
+    "dates": [{from:"2021-05-29", to:"2021-06-05", place: "Limasol"}],
+    "flag": "🇨🇾"
   },
   {
     "index": "map_41",
@@ -248,7 +252,8 @@ const countries = [
     "country_name": "EGYPT",
     "visited": true,
     "days": 7,
-    "dates": [{from:"2019-11-11", to:"2019-11-18", place: "Sharm El Sheikh"}]
+    "dates": [{from:"2019-11-11", to:"2019-11-18", place: "Sharm El Sheikh"}],
+    "flag": "🇪🇬"
   },
   {
     "index": "map_49",
@@ -291,7 +296,8 @@ const countries = [
     "visited": true,
     "days": 61,
     "dates": [{from:"2022-04-24", to:"2022-05-22",place: "Paris"},
-      {from:"2022-06-05", to:"2022-07-10",place: "Nice"} ]
+      {from:"2022-06-05", to:"2022-07-10",place: "Nice"} ],
+    "flag": "🇫🇷"
   },
   {
     "index": "map_57",
@@ -323,7 +329,8 @@ const countries = [
     "country_name": "GREECE",
     "visited": true,
     "days": 13,
-    "dates": [{from:"2018-05-18", to:"2018-06-01", place: "Athens"}]
+    "dates": [{from:"2018-05-18", to:"2018-06-01", place: "Athens"}],
+    "flag": "🇬🇷"
   },
   {
     "index": "map_63",
@@ -380,7 +387,8 @@ const countries = [
     "country_name": "INDONESIA",
     "visited": true,
     "days": 60,
-    "dates": [{from:"2022-08-06", to:"2022-10-01", place: "Bali"}]
+    "dates": [{from:"2022-08-06", to:"2022-10-01", place: "Bali"}],
+    "flag": "🇮🇩"
   },
   {
     "index": "map_74",
@@ -407,7 +415,8 @@ const countries = [
     "country_name": "ITALY",
     "visited": true,
     "days": 9,
-    "dates": [{from:"2019-05-29", to:"2019-06-07", place: "Roma, Florence"}]
+    "dates": [{from:"2019-05-29", to:"2019-06-07", place: "Roma, Florence"}],
+    "flag": "🇮🇹"
   },
   {
     "index": "map_79",
@@ -514,7 +523,8 @@ const countries = [
     "country_name": "MALAYSIA",
     "visited": true,
     "days": 2,
-    "dates": [{from:"2022-09-02", to:"2022-09-04", place: "Kuala Lumpur"}]
+    "dates": [{from:"2022-09-02", to:"2022-09-04", place: "Kuala Lumpur"}],
+    "flag": "🇲🇾"
 
   },
   {
@@ -667,7 +677,8 @@ const countries = [
     "country_name": "POLAND",
     "visited": true,
     "days": 14,
-    "dates": [{from:"2022-05-22", to:"2022-06-05", place: 'Warsaw'}]
+    "dates": [{from:"2022-05-22", to:"2022-06-05", place: 'Warsaw'}],
+    "flag": "🇵🇱"
 
   },
   {
@@ -675,7 +686,8 @@ const countries = [
     "country_name": "PORTUGAL",
     "visited": true,
     "days": 28,
-    "dates": [{from:"2021-11-22", to:"2021-12-19", place: "Lisabon"}]
+    "dates": [{from:"2021-11-22", to:"2021-12-19", place: "Lisabon"}],
+    "flag": "🇵🇹"
 
   },
   {
@@ -698,7 +710,8 @@ const countries = [
     "country_name": "RUSSIA",
     "visited": true,
     "days": 5,
-    "dates": [{from:"2004-08-01", to:"2004-08-06", place: "Moscow"}]
+    "dates": [{from:"2004-08-01", to:"2004-08-06", place: "Moscow"}],
+    "flag": "🇷🇺"
   },
   {
     "index": "map_135",
@@ -775,7 +788,8 @@ const countries = [
     "country_name": "SPAIN",
     "visited": true,
     "days": 7,
-    "dates": [{from:"2018-11-12", to:"2018-11-19", place: "Barcelona"}]
+    "dates": [{from:"2018-11-12", to:"2018-11-19", place: "Barcelona"}],
+    "flag": "🇪🇸"
   },
   {
     "index": "map_150",
@@ -839,7 +853,8 @@ const countries = [
     "days": 60,
     "dates": [{from:"2022-07-11", to:"2022-07-16",place:"Bangkok"},
       {from:"2022-07-16", to:"2022-08-06",place:"Krabi"},
-      {from:"2022-10-01", to:"2022-10-29",place:"Krabi"}]
+      {from:"2022-10-01", to:"2022-10-29",place:"Krabi"}],
+    "flag": "🇹🇭"
   },
   {
     "index": "map_162",
@@ -892,7 +907,8 @@ const countries = [
     "visited": true,
     "days": 43,
     "dates": [{from:"2021-12-19", to:"2022-01-22", place: "London"},
-      {from:"2022-04-10", to:"2022-04-24", place: "London"} ]
+      {from:"2022-04-10", to:"2022-04-24", place: "London"} ],
+    "flag": "🇬🇧"
   },
   {
     "index": "map_172",
@@ -971,7 +987,6 @@ const popup = document.getElementById("popup");
 
 // Close Popup Event
 const showPopup = (country) => {
-  console.log(country)
   const popUpDates = document.getElementById("dates");
   popUpDates.innerHTML = '';
   for (let period of country.dates) {
@@ -979,7 +994,7 @@ const showPopup = (country) => {
     p.innerHTML = `<a href="#">${period.from} - ${period.to} ${period.place}</a>`;
     popUpDates.appendChild(p);
   }
-  document.getElementById("country").innerText = country.country_name;
+  document.getElementById("country").innerText = `${country.flag} ${country.country_name}`;
 
   overlay.style.display = 'block';
   popup.style.display = 'block';
