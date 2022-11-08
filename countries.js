@@ -976,10 +976,6 @@ visitedCountries.forEach((vc)=>{
   }
 })
 
-
-
-
-
 // Initialize Variables
 const closePopup = document.getElementById("popupclose");
 const overlay = document.getElementById("overlay");
