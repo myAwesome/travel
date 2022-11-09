@@ -522,10 +522,11 @@ const countries = [
     "index": "map_99",
     "country_name": "MALAYSIA",
     "visited": true,
-    "days": 2,
-    "dates": [{from:"2022-09-02", to:"2022-09-04", place: "Kuala Lumpur"}],
+    "days": 23,
+    "dates": [
+        {from:"2022-09-02", to:"2022-09-04", place: "Kuala Lumpur"},
+      {from:"2022-11-12", to:"2022-12-03", place: "Kuala Lumpur"}],
     "flag": "🇲🇾"
-
   },
   {
     "index": "map_100",
