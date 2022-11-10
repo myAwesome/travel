@@ -7,19 +7,19 @@
         path {
             stroke: #777;
         }
-        .highlight-3 {
+        .highlight-3.fill, .highlight-3.legend {
             fill: #91a280;
         }
-        .highlight-12 {
+        .highlight-12.fill, .highlight-12.legend {
             fill: #829a6b;
         }
-        .highlight-27 {
+        .highlight-27.fill, .highlight-27.legend {
             fill: #67814e;
         }
-        .highlight-60 {
+        .highlight-60.fill, .highlight-60.legend {
             fill: #4d6733;
         }
-        .highlight-60-more {
+        .highlight-60-more.fill, .highlight-60-more.legend {
             fill: #354b1e;
         }
         .visited:hover {
@@ -536,19 +536,17 @@
                 <title>bali</title>
             </circle>
 
-            <rect x="420" y="430" width="20" height="10" class="highlight-60-more"/>
-            <text font-size="10" font-family="Verdana" x="450" y="440">more than 60 days</text>
-            <rect x="420" y="445" width="20" height="10" class="highlight-60"/>
-            <text font-size="10" font-family="Verdana" x="450" y="455">28 - 60 days</text>
-            <rect x="420" y="460" width="20" height="10" class="highlight-27"/>
-            <text font-size="10" font-family="Verdana" x="450" y="470">13 - 27 days</text>
-            <rect x="420" y="475" width="20" height="10" class="highlight-12"/>
-            <text font-size="10" font-family="Verdana" x="450" y="485">3 - 12 days</text>
-            <rect x="420" y="490" width="20" height="10" class="highlight-3"/>
+            <rect id="highlight-60-more" x="420" y="430" width="20" height="10" class="legend highlight-60-more"/>
+            <text font-size="10" font-family="Verdana" x="450" y="440">more than 2 month</text>
+            <rect id="highlight-60"  x="420" y="445" width="20" height="10" class="legend highlight-60"/>
+            <text font-size="10" font-family="Verdana" x="450" y="455">1 - 2 month</text>
+            <rect id="highlight-27" x="420" y="460" width="20" height="10" class="legend highlight-27"/>
+            <text font-size="10" font-family="Verdana" x="450" y="470">2 - 4 weeks </text>
+            <rect id="highlight-12" x="420" y="475" width="20" height="10" class="legend highlight-12"/>
+            <text font-size="10" font-family="Verdana" x="450" y="485">less than 2 weeks</text>
+            <rect id="highlight-3" x="420" y="490" width="20" height="10" class="legend highlight-3"/>
             <text font-size="10" font-family="Verdana" x="450" y="500">less than 3 days</text>
           </svg>
-
-
 
     </div>
     <script src="countries.js"></script>

@@ -964,15 +964,16 @@ visitedCountries.forEach((vc)=>{
   const area = document.getElementById(vc.index);
   area.onclick = () => showPopup(vc);
   area.classList.add('visited');
+  area.classList.add('fill');
   if (vc.days <= 3){
     area.classList.add('highlight-3');
   } else if(vc.days > 3 && vc.days <= 12 ){
     area.classList.add('highlight-12');
   } else if(vc.days >12 && vc.days <= 27 ){
     area.classList.add('highlight-27');
-  } else if(vc.days > 27 && vc.days <= 60 ){
+  } else if(vc.days > 27 && vc.days <= 59 ){
     area.classList.add('highlight-60');
-  } else if(vc.days > 60 ){
+  } else if(vc.days >= 60 ){
     area.classList.add('highlight-60-more');
   }
 })
@@ -1002,3 +1003,30 @@ closePopup.onclick = function() {
   overlay.style.display = 'none';
   popup.style.display = 'none';
 };
+
+
+const legends = document.getElementsByClassName('legend');
+
+const vCountries = document.getElementsByClassName('visited');
+
+for (let legend of legends) {
+  legend.addEventListener(
+      "mouseover",
+      ()=>{
+        for (let country of vCountries) {
+          if (!country.classList.contains(legend.id)){
+            country.classList.remove('fill')
+          }
+        }
+      }
+  );
+
+  legend.addEventListener("mouseleave", ()=>{
+    for (let country of vCountries) {
+      if (!country.classList.contains('fill')){
+        country.classList.add('fill')
+      }
+    }
+  })
+
+}
