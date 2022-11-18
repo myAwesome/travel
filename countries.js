@@ -141,7 +141,36 @@ const countries = [
     "country_name": "CAMBODIA",
     "visited": true,
     "days": 14,
-    "dates": [{from:"2022-10-29", to:"2022-11-12", place: "Siem Reap"}],
+    "dates": [
+      {
+        from: "2022-10-29",
+        to: "2022-11-12",
+        place: "Siem Reap",
+        images: [
+          {
+            'th': "https://nomand.s3.eu-west-1.amazonaws.com/t14-cambodia'22/20221110_083058_th.jpg",
+            "org": "https://nomand.s3.eu-west-1.amazonaws.com/t14-cambodia'22/20221110_083058.jpg"
+          },
+          {
+            'th': "https://nomand.s3.eu-west-1.amazonaws.com/t14-cambodia'22/20221110_092008_th.jpg",
+            "org": "https://nomand.s3.eu-west-1.amazonaws.com/t14-cambodia'22/20221110_092008.jpg"
+          },
+          {
+            'th': "https://nomand.s3.eu-west-1.amazonaws.com/t14-cambodia'22/20221110_175908_th.jpg",
+            "org": "https://nomand.s3.eu-west-1.amazonaws.com/t14-cambodia'22/20221110_175908.jpg"
+          },
+          {
+            'th': "https://nomand.s3.eu-west-1.amazonaws.com/t14-cambodia'22/20221111_173052_th.jpg",
+            "org": "https://nomand.s3.eu-west-1.amazonaws.com/t14-cambodia'22/20221111_173052.jpg"
+          },
+          {
+            'th': "https://nomand.s3.eu-west-1.amazonaws.com/t14-cambodia'22/20221110_092222_th.jpg",
+            "org": "https://nomand.s3.eu-west-1.amazonaws.com/t14-cambodia'22/20221110_092222.jpg"
+          },
+
+
+        ]
+      }],
     "flag": "🇰🇭"
   },
   {
@@ -978,7 +1007,7 @@ visitedCountries.forEach((vc)=>{
   }
 })
 
-// Initialize Variables
+// Initialize Popup vars
 const closePopup = document.getElementById("popupclose");
 const overlay = document.getElementById("overlay");
 const popup = document.getElementById("popup");
@@ -989,14 +1018,28 @@ const showPopup = (country) => {
   popUpDates.innerHTML = '';
   for (let period of country.dates) {
     const p = document.createElement("p");
-    p.innerHTML = `<a href="#">${period.from} - ${period.to} ${period.place}</a>`;
+    p.innerHTML = `<a href="#" onclick="showPhotos(this)">${period.from} - ${period.to} ${period.place}</a>`;
     popUpDates.appendChild(p);
+    const div = document.createElement("div");
+    for (let img of period.images) {
+      const image = document.createElement("img");
+      image.src     = img.th;
+      image.width   = 50;
+      image.height  = 50;
+      image.classList.add('img-th')
+      div.append(image);
+    }
+    popUpDates.append(div);
   }
   document.getElementById("country").innerText = `${country.flag} ${country.country_name}`;
 
   overlay.style.display = 'block';
   popup.style.display = 'block';
+}
 
+const showPhotos = (node, id) => {
+  console.log(images[0]);
+  console.log(node)
 }
 
 closePopup.onclick = function() {
