@@ -415,7 +415,7 @@ const countries = [
     "index": "map_73",
     "country_name": "INDONESIA",
     "visited": true,
-    "days": 60,
+    "days": 120,
     "dates": [{from:"2022-08-06", to:"2022-10-01", place: "Bali"}, {from:"2022-12-03", to:"2022-01-28", place: "Bali"} ],
     "flag": "🇮🇩"
   },
@@ -1021,14 +1021,17 @@ const showPopup = (country) => {
     p.innerHTML = `<a href="#" onclick="showPhotos(this)">${period.from} - ${period.to} ${period.place}</a>`;
     popUpDates.appendChild(p);
     const div = document.createElement("div");
-    for (let img of period.images) {
-      const image = document.createElement("img");
-      image.src     = img.th;
-      image.width   = 50;
-      image.height  = 50;
-      image.classList.add('img-th')
-      div.append(image);
+    if (period.images){
+      for (let img of period.images) {
+        const image = document.createElement("img");
+        image.src     = img.th;
+        image.width   = 50;
+        image.height  = 50;
+        image.classList.add('img-th')
+        div.append(image);
+      }
     }
+
     popUpDates.append(div);
   }
   document.getElementById("country").innerText = `${country.flag} ${country.country_name}`;
