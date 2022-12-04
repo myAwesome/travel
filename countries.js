@@ -416,7 +416,7 @@ const countries = [
     "country_name": "INDONESIA",
     "visited": true,
     "days": 60,
-    "dates": [{from:"2022-08-06", to:"2022-10-01", place: "Bali"}],
+    "dates": [{from:"2022-08-06", to:"2022-10-01", place: "Bali"}, {from:"2022-12-03", to:"2022-01-28", place: "Bali"} ],
     "flag": "🇮🇩"
   },
   {
