@@ -551,10 +551,11 @@ const countries = [
     "index": "map_99",
     "country_name": "MALAYSIA",
     "visited": true,
-    "days": 23,
+    "days": 51,
     "dates": [
         {from:"2022-09-02", to:"2022-09-04", place: "Kuala Lumpur"},
-      {from:"2022-11-12", to:"2022-12-03", place: "Kuala Lumpur"}],
+      {from:"2022-11-12", to:"2022-12-03", place: "Kuala Lumpur"},
+      {from:"2023-01-29", to:"2022-02-26", place: "Kuala Lumpur"}],
     "flag": "🇲🇾"
   },
   {
@@ -883,7 +884,10 @@ const countries = [
     "days": 60,
     "dates": [{from:"2022-07-11", to:"2022-07-16",place:"Bangkok"},
       {from:"2022-07-16", to:"2022-08-06",place:"Krabi"},
-      {from:"2022-10-01", to:"2022-10-29",place:"Krabi"}],
+      {from:"2022-10-01", to:"2022-10-29",place:"Krabi"},
+      {from:"2023-02-26", to:"2023-03-19",place:"Chiang Mai"},
+      {from:"2023-03-19", to:"2023-03-25",place:"Bangkok"}
+    ],
     "flag": "🇹🇭"
   },
   {
