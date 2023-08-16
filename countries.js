@@ -124,7 +124,10 @@ const countries = [
   {
     "index": "map_24",
     "country_name": "BULGARIA",
-    "visited": false
+    "visited": true,
+    "days": 56,
+    "dates": [{from:"2023-08-12", to:"2023-10-08",place: "Sofia"}],
+    "flag": "🇧🇬"
   },
   {
     "index": "map_25",
@@ -443,8 +446,8 @@ const countries = [
     "index": "map_78",
     "country_name": "ITALY",
     "visited": true,
-    "days": 9,
-    "dates": [{from:"2019-05-29", to:"2019-06-07", place: "Roma, Florence"}],
+    "days": 12,
+    "dates": [{from:"2019-05-29", to:"2019-06-07", place: "Roma, Florence"}, {from:"2023-06-08", to:"2023-06-10", place: "Milan"}],
     "flag": "🇮🇹"
   },
   {
@@ -734,7 +737,11 @@ const countries = [
   {
     "index": "map_133",
     "country_name": "ROMANIA",
-    "visited": false
+    "visited": true,
+    "days": 56,
+    "dates": [{from:"2023-06-11", to:"2023-07-11",place: "Bucharest"},
+      {from:"2023-07-15", to:"2023-08-12",place: "Bucharest"}],
+    "flag": "🇷🇴"
   },
   {
     "index": "map_134",
@@ -939,9 +946,10 @@ const countries = [
     "index": "map_171",
     "country_name": "UNITED KINGDOM",
     "visited": true,
-    "days": 43,
+    "days": 47,
     "dates": [{from:"2021-12-19", to:"2022-01-22", place: "London"},
-      {from:"2022-04-10", to:"2022-04-24", place: "London"} ],
+      {from:"2022-04-10", to:"2022-04-24", place: "London"},
+      {from:"2023-07-11", to:"2023-07-15", place: "London"} ],
     "flag": "🇬🇧"
   },
   {
