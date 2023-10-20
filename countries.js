@@ -209,7 +209,8 @@ const countries = [
   {
     "index": "map_34",
     "country_name": "COLOMBIA",
-    "visited": false
+    "visited": false,
+    "flag":"🇨🇴"
   },
   {
     "index": "map_35",
@@ -224,7 +225,8 @@ const countries = [
   {
     "index": "map_37",
     "country_name": "COSTA RICA",
-    "visited": false
+    "visited": false,
+    "flag":"🇨🇷"
   },
   {
     "index": "map_38",
@@ -277,7 +279,8 @@ const countries = [
   {
     "index": "map_47",
     "country_name": "ECUADOR",
-    "visited": false
+    "visited": false,
+    "flag":"🇪🇨"
   },
   {
     "index": "map_48",
@@ -372,7 +375,8 @@ const countries = [
   {
     "index": "map_64",
     "country_name": "GUATEMALA",
-    "visited": false
+    "visited": false,
+    "flag":"🇬🇹"
   },
   {
     "index": "map_65",
@@ -589,7 +593,8 @@ const countries = [
   {
     "index": "map_105",
     "country_name": "MEXICO",
-    "visited": false
+    "visited": false,
+    "flag":"🇲🇽"
   },
   {
     "index": "map_106",
@@ -684,7 +689,8 @@ const countries = [
   {
     "index": "map_124",
     "country_name": "PANAMA",
-    "visited": false
+    "visited": false,
+    "flag":"🇵🇦"
   },
   {
     "index": "map_125",
@@ -826,7 +832,7 @@ const countries = [
     "country_name": "SPAIN",
     "visited": true,
     "days": 7,
-    "dates": [{from:"2018-11-12", to:"2018-11-19", place: "Barcelona"}],
+    "dates": [{from:"2018-11-12", to:"2018-11-19", place: "Barcelona"}, {from:"2023-10-07", to:"2023-11-04", place: "Madrid"}],
     "flag": "🇪🇸"
   },
   {
