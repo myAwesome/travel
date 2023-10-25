@@ -170,8 +170,6 @@ const countries = [
             'th': "https://nomand.s3.eu-west-1.amazonaws.com/t14-cambodia'22/20221110_092222_th.jpg",
             "org": "https://nomand.s3.eu-west-1.amazonaws.com/t14-cambodia'22/20221110_092222.jpg"
           },
-
-
         ]
       }],
     "flag": "🇰🇭"
@@ -363,8 +361,8 @@ const countries = [
     "index": "map_62",
     "country_name": "GREECE",
     "visited": true,
-    "days": 13,
-    "dates": [{from:"2018-05-18", to:"2018-06-01", place: "Athens"}],
+    "days": 19,
+    "dates": [{from:"2018-05-18", to:"2018-06-01", place: "Athens"}, {from:"2023-03-26", to:"2018-03-31", place: "Athens"}],
     "flag": "🇬🇷"
   },
   {
@@ -726,7 +724,7 @@ const countries = [
     "country_name": "PORTUGAL",
     "visited": true,
     "days": 28,
-    "dates": [{from:"2021-11-22", to:"2021-12-19", place: "Lisabon"}],
+    "dates": [{from:"2021-11-22", to:"2021-12-19", place: "Lisbon"}],
     "flag": "🇵🇹"
 
   },
@@ -831,7 +829,7 @@ const countries = [
     "index": "map_149",
     "country_name": "SPAIN",
     "visited": true,
-    "days": 7,
+    "days": 36,
     "dates": [{from:"2018-11-12", to:"2018-11-19", place: "Barcelona"}, {from:"2023-10-07", to:"2023-11-04", place: "Madrid"}],
     "flag": "🇪🇸"
   },
@@ -1094,3 +1092,31 @@ for (let legend of legends) {
   })
 
 }
+
+
+const zoom = (scale) => {
+  console.log(`\nzoom ${scale}`)
+  // if (!svgRef.current) {
+  //   return;
+  // }
+  // setCurrZoom((prev) => prev * scale);
+  // const viewbox = svgRef.current.getAttributeNS(null, 'viewBox')!.split(' ');
+  // const centerX = parseFloat(viewbox[2]) / 2;
+  // const centerY = parseFloat(viewbox[3]) / 2;
+  // transformMatrix.forEach((t, i) => {
+  //   transformMatrix[i] *= scale;
+  // });
+  //
+  // transformMatrix[4] += (1 - scale) * centerX;
+  // transformMatrix[5] += (1 - scale) * centerY;
+  // setMatrix();
+};
+
+const reset = () => {
+  console.log(`\nreset`)
+  // transformMatrix.forEach((t, i) => {
+  //   transformMatrix[i] = initialTransformMatrix[i];
+  // });
+  // setCurrZoom(1);
+  // setMatrix();
+};
