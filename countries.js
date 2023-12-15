@@ -207,8 +207,10 @@ const countries = [
   {
     "index": "map_34",
     "country_name": "COLOMBIA",
-    "visited": false,
-    "flag":"🇨🇴"
+    "visited": true,
+    "flag":"🇨🇴",
+    "days": 28,
+    "dates": [{from:"2023-11-04", to:"2023-12-02", place: "Bogota"}],
   },
   {
     "index": "map_35",
@@ -277,8 +279,10 @@ const countries = [
   {
     "index": "map_47",
     "country_name": "ECUADOR",
-    "visited": false,
-    "flag":"🇪🇨"
+    "flag":"🇪🇨",
+    "visited": true,
+    "days": 35,
+    "dates": [{from:"2023-12-02", to:"2023-12-22", place: "Quito"}, {from:"2023-12-22", to:"2024-01-05", place: "Galápagos Islands"}],
   },
   {
     "index": "map_48",
@@ -688,7 +692,9 @@ const countries = [
     "index": "map_124",
     "country_name": "PANAMA",
     "visited": false,
-    "flag":"🇵🇦"
+    "flag":"🇵🇦",
+    "days": 28,
+    "dates": [{from:"2024-01-05", to:"2024-02-03", place: "Panama"}],
   },
   {
     "index": "map_125",
