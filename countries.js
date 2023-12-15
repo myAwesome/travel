@@ -691,7 +691,7 @@ const countries = [
   {
     "index": "map_124",
     "country_name": "PANAMA",
-    "visited": false,
+    "visited": true,
     "flag":"🇵🇦",
     "days": 28,
     "dates": [{from:"2024-01-05", to:"2024-02-03", place: "Panama"}],
