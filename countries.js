@@ -755,11 +755,8 @@ const countries = [
   },
   {
     "index": "map_134",
-    "country_name": "RUSSIA",
-    "visited": true,
-    "days": 5,
-    "dates": [{from:"2004-08-01", to:"2004-08-06", place: "Moscow"}],
-    "flag": "🇷🇺"
+    "country_name": "хуйня",
+    "visited": false,
   },
   {
     "index": "map_135",
