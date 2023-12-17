@@ -331,9 +331,9 @@ const countries = [
     "index": "map_56",
     "country_name": "FRANCE",
     "visited": true,
-    "days": 61,
+    "days": 132,
     "dates": [{from:"2022-04-24", to:"2022-05-22",place: "Paris"},
-      {from:"2022-06-05", to:"2022-07-10",place: "Nice"} ],
+      {from:"2022-06-05", to:"2022-07-10",place: "Nice"}, {from:"2023-03-31", to:"2023-06-10",place: "Nice"} ],
     "flag": "🇫🇷"
   },
   {
