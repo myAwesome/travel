@@ -377,8 +377,12 @@ const countries = [
   {
     "index": "map_64",
     "country_name": "GUATEMALA",
-    "visited": false,
-    "flag":"🇬🇹"
+    "flag":"🇬🇹",
+    "visited": true,
+    "days": 18,
+    "dates": [
+      {from:"2024-03-02", to:"2022-03-20", place: "Guatemala"}
+    ]
   },
   {
     "index": "map_65",
@@ -595,8 +599,12 @@ const countries = [
   {
     "index": "map_105",
     "country_name": "MEXICO",
-    "visited": false,
-    "flag":"🇲🇽"
+    "flag":"🇲🇽",
+    "visited": true,
+    "days": 16,
+    "dates": [
+      {from:"2024-03-20", to:"2022-04-05", place: "Mexico"}],
+
   },
   {
     "index": "map_106",
