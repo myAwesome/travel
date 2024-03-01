@@ -225,8 +225,15 @@ const countries = [
   {
     "index": "map_37",
     "country_name": "COSTA RICA",
-    "visited": false,
-    "flag":"🇨🇷"
+    "visited": true,
+    "flag":"🇨🇷",
+    "days": 28,
+    "dates": [
+        {from:"2021-02-03", to:"2024-02-10", place: "San Jose"},
+        {from:"2021-02-10", to:"2024-02-17", place: "Uvita"},
+        {from:"2021-02-17", to:"2024-02-24", place: "Quepos"},
+        {from:"2021-02-24", to:"2024-03-02", place: "Heredia"},
+    ],
   },
   {
     "index": "map_38",
