@@ -816,7 +816,10 @@ const countries = [
   {
     "index": "map_143",
     "country_name": "SLOVENIA",
-    "visited": false
+    "visited": true,
+    "days": 2,
+    "dates": [{from:"2024-07-25", to:"2024-07-26", place: "Ljubljana"}],
+    "flag": "🇸🇮"
   },
   {
     "index": "map_144",
