@@ -361,7 +361,10 @@ const countries = [
   {
     "index": "map_60",
     "country_name": "GERMANY",
-    "visited": false
+    "visited": true,
+    "days": 2,
+    "dates": [{from:"2024-09-07", to:"2024-09-08", place: "Berlin"}],
+    "flag": "🇬🇷"
   },
   {
     "index": "map_61",
@@ -372,8 +375,8 @@ const countries = [
     "index": "map_62",
     "country_name": "GREECE",
     "visited": true,
-    "days": 19,
-    "dates": [{from:"2018-05-18", to:"2018-06-01", place: "Athens"}, {from:"2023-03-26", to:"2018-03-31", place: "Athens"}],
+    "days": 24,
+    "dates": [{from:"2018-05-18", to:"2018-06-01", place: "Athens"}, {from:"2023-03-26", to:"2018-03-31", place: "Athens"},{from:"2024-10-26", to:"2024-10-31", place: "Athens"}],
     "flag": "🇬🇷"
   },
   {
