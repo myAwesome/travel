@@ -260,7 +260,7 @@ const countries = [
   },
   {
     "index": "map_42",
-    "country_name": "CÔTE D&#39;IVOIRE",
+    "country_name": "CÔTE D'IVOIRE",
     "visited": false
   },
   {
@@ -364,7 +364,7 @@ const countries = [
     "visited": true,
     "days": 2,
     "dates": [{from:"2024-09-07", to:"2024-09-08", place: "Berlin"}],
-    "flag": "🇬🇷"
+    "flag": "🇩🇪"
   },
   {
     "index": "map_61",
@@ -376,7 +376,7 @@ const countries = [
     "country_name": "GREECE",
     "visited": true,
     "days": 24,
-    "dates": [{from:"2018-05-18", to:"2018-06-01", place: "Athens"}, {from:"2023-03-26", to:"2018-03-31", place: "Athens"},{from:"2024-10-26", to:"2024-10-31", place: "Athens"}],
+    "dates": [{from:"2018-05-18", to:"2018-06-01", place: "Athens"}, {from:"2023-03-26", to:"2023-03-31", place: "Athens"},{from:"2024-10-26", to:"2024-10-31", place: "Athens"}],
     "flag": "🇬🇷"
   },
   {
@@ -391,7 +391,7 @@ const countries = [
     "visited": true,
     "days": 18,
     "dates": [
-      {from:"2024-03-02", to:"2022-03-20", place: "Guatemala"}
+      {from:"2024-03-02", to:"2024-03-20", place: "Guatemala"}
     ]
   },
   {
@@ -439,7 +439,7 @@ const countries = [
     "country_name": "INDONESIA",
     "visited": true,
     "days": 120,
-    "dates": [{from:"2022-08-06", to:"2022-10-01", place: "Bali"}, {from:"2022-12-03", to:"2022-01-28", place: "Bali"} ],
+    "dates": [{from:"2022-08-06", to:"2022-10-01", place: "Bali"}, {from:"2022-12-03", to:"2023-01-28", place: "Bali"} ],
     "flag": "🇮🇩"
   },
   {
@@ -459,7 +459,7 @@ const countries = [
   },
   {
     "index": "map_77",
-    "country_name": "ISREAL",
+    "country_name": "ISRAEL",
     "visited": false
   },
   {
@@ -578,7 +578,7 @@ const countries = [
     "dates": [
         {from:"2022-09-02", to:"2022-09-04", place: "Kuala Lumpur"},
       {from:"2022-11-12", to:"2022-12-03", place: "Kuala Lumpur"},
-      {from:"2023-01-29", to:"2022-02-26", place: "Kuala Lumpur"}],
+      {from:"2023-01-29", to:"2023-02-26", place: "Kuala Lumpur"}],
     "flag": "🇲🇾"
   },
   {
@@ -754,7 +754,7 @@ const countries = [
   },
   {
     "index": "map_131",
-    "country_name": "PUETRO RICO",
+    "country_name": "PUERTO RICO",
     "visited": false
   },
   {
@@ -773,8 +773,8 @@ const countries = [
   },
   {
     "index": "map_134",
-    "country_name": "хуйня",
-    "visited": false,
+    "country_name": "RUSSIA",
+    "visited": false
   },
   {
     "index": "map_135",
@@ -1058,9 +1058,14 @@ const showPopup = (country) => {
   popUpDates.innerHTML = '';
   for (let period of country.dates) {
     const p = document.createElement("p");
-    p.innerHTML = `<a href="#" onclick="showPhotos(this)">${period.from} - ${period.to} ${period.place}</a>`;
+    const a = document.createElement("a");
+    a.href = "#";
+    a.textContent = `${period.from} - ${period.to} ${period.place}`;
+    a.addEventListener("click", (e) => { e.preventDefault(); showPhotos(div); });
+    p.appendChild(a);
     popUpDates.appendChild(p);
     const div = document.createElement("div");
+    div.style.display = 'none';
     if (period.images){
       for (let img of period.images) {
         const image = document.createElement("img");
@@ -1080,9 +1085,8 @@ const showPopup = (country) => {
   popup.style.display = 'block';
 }
 
-const showPhotos = (node, id) => {
-  console.log(images[0]);
-  console.log(node)
+const showPhotos = (imagesDiv) => {
+  imagesDiv.style.display = imagesDiv.style.display === 'none' ? 'block' : 'none';
 }
 
 closePopup.onclick = function() {
