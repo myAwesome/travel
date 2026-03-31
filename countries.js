@@ -1122,29 +1122,22 @@ for (let legend of legends) {
 }
 
 
+const initialViewBox = { x: 0, y: 0, w: 1000, h: 500 };
+let currentViewBox = { ...initialViewBox };
+
 const zoom = (scale) => {
-  console.log(`\nzoom ${scale}`)
-  // if (!svgRef.current) {
-  //   return;
-  // }
-  // setCurrZoom((prev) => prev * scale);
-  // const viewbox = svgRef.current.getAttributeNS(null, 'viewBox')!.split(' ');
-  // const centerX = parseFloat(viewbox[2]) / 2;
-  // const centerY = parseFloat(viewbox[3]) / 2;
-  // transformMatrix.forEach((t, i) => {
-  //   transformMatrix[i] *= scale;
-  // });
-  //
-  // transformMatrix[4] += (1 - scale) * centerX;
-  // transformMatrix[5] += (1 - scale) * centerY;
-  // setMatrix();
+  const svg = document.getElementById('map');
+  const centerX = currentViewBox.x + currentViewBox.w / 2;
+  const centerY = currentViewBox.y + currentViewBox.h / 2;
+  currentViewBox.w /= scale;
+  currentViewBox.h /= scale;
+  currentViewBox.x = centerX - currentViewBox.w / 2;
+  currentViewBox.y = centerY - currentViewBox.h / 2;
+  svg.setAttribute('viewBox', `${currentViewBox.x} ${currentViewBox.y} ${currentViewBox.w} ${currentViewBox.h}`);
 };
 
 const reset = () => {
-  console.log(`\nreset`)
-  // transformMatrix.forEach((t, i) => {
-  //   transformMatrix[i] = initialTransformMatrix[i];
-  // });
-  // setCurrZoom(1);
-  // setMatrix();
+  const svg = document.getElementById('map');
+  currentViewBox = { ...initialViewBox };
+  svg.setAttribute('viewBox', `${currentViewBox.x} ${currentViewBox.y} ${currentViewBox.w} ${currentViewBox.h}`);
 };
