@@ -1125,19 +1125,55 @@ for (let legend of legends) {
 const initialViewBox = { x: 0, y: 0, w: 1000, h: 500 };
 let currentViewBox = { ...initialViewBox };
 
-const zoom = (scale) => {
+const applyViewBox = () => {
   const svg = document.getElementById('map');
+  svg.setAttribute('viewBox', `${currentViewBox.x} ${currentViewBox.y} ${currentViewBox.w} ${currentViewBox.h}`);
+};
+
+const zoom = (scale) => {
   const centerX = currentViewBox.x + currentViewBox.w / 2;
   const centerY = currentViewBox.y + currentViewBox.h / 2;
   currentViewBox.w /= scale;
   currentViewBox.h /= scale;
   currentViewBox.x = centerX - currentViewBox.w / 2;
   currentViewBox.y = centerY - currentViewBox.h / 2;
-  svg.setAttribute('viewBox', `${currentViewBox.x} ${currentViewBox.y} ${currentViewBox.w} ${currentViewBox.h}`);
+  applyViewBox();
 };
 
 const reset = () => {
-  const svg = document.getElementById('map');
   currentViewBox = { ...initialViewBox };
-  svg.setAttribute('viewBox', `${currentViewBox.x} ${currentViewBox.y} ${currentViewBox.w} ${currentViewBox.h}`);
+  applyViewBox();
 };
+
+// Pan (drag) support
+let isPanning = false;
+let panStart = { x: 0, y: 0 };
+
+document.addEventListener('DOMContentLoaded', () => {
+  const svg = document.getElementById('map');
+
+  svg.addEventListener('mousedown', (e) => {
+    if (e.button !== 0) return;
+    isPanning = true;
+    panStart = { x: e.clientX, y: e.clientY };
+    svg.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isPanning) return;
+    const dx = (e.clientX - panStart.x) * (currentViewBox.w / svg.clientWidth);
+    const dy = (e.clientY - panStart.y) * (currentViewBox.h / svg.clientHeight);
+    currentViewBox.x -= dx;
+    currentViewBox.y -= dy;
+    panStart = { x: e.clientX, y: e.clientY };
+    applyViewBox();
+  });
+
+  window.addEventListener('mouseup', () => {
+    isPanning = false;
+    svg.style.cursor = 'grab';
+  });
+
+  svg.style.cursor = 'grab';
+});
